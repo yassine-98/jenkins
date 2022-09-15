@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh 'python --version'
         sh 'java --version'
-        sh 'ping localhost'
+        sh 'echo salut tout le monde'
       }
     }
     stage('hello phrase') {
