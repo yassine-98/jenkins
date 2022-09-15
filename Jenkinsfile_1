@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('stage 1') {
       steps {
-        sh 'python --version'
+        sh 'env | sort'
         echo "Build id is ${currentBuild.id}"
         
       }
