@@ -6,7 +6,7 @@ pipeline {
     stage('Test') {
       steps {
         sh 'python --version'
-        sh 'print ("le résulat",7*9) '
+        sh 'python hello.py'
       }
     }
   }
