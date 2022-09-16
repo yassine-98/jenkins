@@ -11,7 +11,3 @@ pipeline {
     }
   }
 }
-# docker run -p 8080:8080 -p 50000:50000 -v D:\docker-data\jenkins:/var/jenkins_home -v /usr/local/bin/docker:/usr/bin/docker -v /var/run/docker.sock:/var/run/docker.sock -u root jenkins/jenkins:lts
-# "//var/run/docker.sock:/var/run/docker.sock"
-
-# docker run --rm -d -p 8080:8080 -p 50000:50000 --restart=on-failure -u root:root -v jenkins_home:/var/jenkins_home -v "//var/run/docker.sock:/var/run/docker.sock"  --name jenk jenkins/jenkins:lts
