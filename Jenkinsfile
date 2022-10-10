@@ -1,16 +1,13 @@
 pipeline {
-  agent any
+  agent {
+    docker { image 'python:3-alpine' }
+  }
   stages {
-    stage('stage 1') {
-      steps {
-        sh 'python --version'
-        sh 'java --version'
-        sh 'echo salut tout le monde'
-      }
-    }
-    stage('stage 2') {
+    stage('Build') {
       steps {
         sh 'python hello.py'
+        sh 'env | sort'
+        echo "Build id is ${currentBuild.id}"
       }
     }
   }
